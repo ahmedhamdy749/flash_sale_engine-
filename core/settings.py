@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-g0(f2q5!q+0w80!-&6=we7dskqz-_2!b%9u6%lwh5qtf^mc7pe
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -133,3 +133,8 @@ CELERY_BROKER_URL = os.environ.get('REDIS_URL', 'redis://redis:6379/0')
 CELERY_RESULT_BACKEND = os.environ.get('REDIS_URL', 'redis://redis:6379/0')
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
+
+
+
+
+REDIS_URL = os.environ.get('REDIS_URL', 'redis://redis:6379/0')
